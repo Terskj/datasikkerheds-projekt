@@ -15,12 +15,12 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300%;
-  height: 300%;
+  width: 100vw;
+  height: 100vh;
   background-image: radial-gradient(circle, var(--dot-color, #ff4ecd) 1.5px, transparent 1.5px);
   background-size: 40px 40px;
   animation: moveDots 40s linear infinite, shiftColor 8s ease-in-out infinite alternate;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -127,16 +127,21 @@ li {
 }
 
 .intro {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(46, 41, 78, 0.95);
   padding: 2rem;
   border-radius: 12px;
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-  box-shadow: 0 0 12px rgba(255, 78, 205, 0.2);
-  border: 1px solid rgba(255, 78, 205, 0.2);
   color: #f4e4ff;
   text-align: center;
   animation: fadeIn 0.8s ease-in-out;
+  box-shadow: 0 0 12px rgba(255, 78, 205, 0.2);
+  border: 1px solid rgba(255, 78, 205, 0.2);
+}
+@supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) or (-webkit-backdrop-filter: blur(6px)) {
+  .intro {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 }
 
 @media (max-width: 768px) {
