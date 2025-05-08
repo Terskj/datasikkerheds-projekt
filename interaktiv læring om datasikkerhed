@@ -1,0 +1,4 @@
+Projektet er udviklet som en interaktiv oplevelse, der formidler viden om datasikkerhed gennem realistiske scenarier man kan komme ud for når man begår sig på internettet. Jeg har valgt: phishing, adgangskoder, offentligt Wi-Fi og sociale medier.
+I selve funktionerne er det bygget op således at: brugeren træffer valg, der former historiens forløb og branching scenarios'ne er med flere slutninger, til sidst får brugeren feedback og opsummering som gemmes via localStorage i JSON-format og designet er responsivt og optimeret til både desktop og mobil.
+Jeg har opbygget projektet i HTML, SCSS (med variabler, mixins og animationer) og JavaScript (DOM-manipulation, events, arrays, JSON). 
+Projektet er lavet som en del af 2. semester på MMD uddannelsen og fokuserer på læring gennem interaktivitet og refleksion over digital adfærd.
