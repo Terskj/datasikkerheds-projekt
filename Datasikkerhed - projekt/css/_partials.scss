@@ -1,0 +1,30 @@
+// Variabler
+$bg-color: #1e1b2e;
+$text-color: #f4e4ff;
+$accent: #ff4ecd;
+$accent-light: lighten($accent, 10%); //hover effekt
+$accent-glow: #c084fc; //Glow effekt
+$accent-cyan: #00faff; // bruges i farveskiftende prikker
+
+// Mixins af styling til knapperne, som sikrer ens udseende på alle knapperne
+@mixin button-style {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, $accent, $accent-light);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  // Hover effekt
+  &:hover {
+    background: $accent-light;
+    box-shadow:
+      0 0 5px $accent,
+      0 0 10px $accent-glow,
+      0 0 15px rgba(255, 78, 205, 0.6);
+  }
+}
